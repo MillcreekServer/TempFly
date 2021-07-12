@@ -20,16 +20,15 @@ jobs:
 
     # Environment image - always newest OS
     runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: ./TempFly
 
     # Run steps
     steps:
       # Pull changes
       - uses: actions/checkout@v2.3.4
-
-      - name: change dir
-        run: 'cd TempFly'
-      - name: pwd
-        run: 'ls'
 
       # Cache artifacts - however this has the downside that we don't get notified of
       # artifact resolution failures like invalid repository
