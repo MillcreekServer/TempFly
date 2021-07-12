@@ -29,7 +29,7 @@ jobs:
       - name: change dir
         run: 'cd TempFly'
       - name: pwd
-        run: 'pwd'
+        run: 'ls'
 
       # Cache artifacts - however this has the downside that we don't get notified of
       # artifact resolution failures like invalid repository
